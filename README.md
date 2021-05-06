@@ -1,12 +1,14 @@
 # bdprochot-toggle
-This simple script can toggle the BD PROCHOT flag on and off if you have problems with extreme Throttling. Repo includes a systemd service to turn BD PROCHOT off at boot.
+This simple script can toggle the BD PROCHOT flag on and off if it causes problems with extreme Throttling. Repo includes a systemd service to turn BD PROCHOT off at boot.
 
 # Warnings
-DONT START THIS SCRIPT TWICE IN A ROW WITH THE SAME ARGUMENTS.
+DONT START THIS SCRIPT TWICE IN A ROW WITH THE SAME ARGUMENTS e.g IF BD PROCHOT IS OFF DONT START THE SCRIPT WITH "off" AND IF BD PROCHOT IS ON DONT START THE SCRIPT WITH "on".
 
 THIS SCRIPT DOESN'T SAVE THE LAST VALUE OF THE REGISTER "0x1FC". ONLY INCREMENTS OR DECREMENTS THE CURRENT VALUE OF THE REGISTER.
 
 USE THIS SCRIPT ONLY IF YOU KNOW WHAT YOU'RE DOING.
+
+IF YOU'RE NOT CAREFUL, THIS COULD BREAK YOUR SYSTEM.
 
 ONLY TESTED ON MY LAPTOP.
 ## dependencies
@@ -33,3 +35,8 @@ turn BD PROCHOT off
 
 turn BD PROCHOT on
 > bdprochot-toggle on
+
+### BTW
+if you want to read the reqister manually(needs also mri-tools) use:
+> \# modprobe msr
+> \# rdmsr -d 0x1FC
