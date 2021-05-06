@@ -1,0 +1,10 @@
+[Unit]
+Wants=boot-complete.target
+After=boot-complete.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/bdprochot-toggle off
+
+[Install]
+WantedBy=multi-user.target
