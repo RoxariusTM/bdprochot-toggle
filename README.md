@@ -37,6 +37,6 @@ turn BD PROCHOT on
 ``` bdprochot-toggle on ```
 
 ### BTW
-if you want to read the reqister manually(needs also mri-tools) use:
+if you want to read the reqister manually(also needs mri-tools) use:
 ``` \# modprobe msr ```
 ``` \# rdmsr -d 0x1FC ```
