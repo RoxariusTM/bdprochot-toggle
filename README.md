@@ -19,24 +19,24 @@ you need:
 ## install instructions
 ### script
 - cd into this repo.
-- > \# cp bdprochot-toggle.sh /usr/bin/bdprochot-toggle
-- > \# chmod +x /usr/bin/bdprochot-toggle
+- \# ``` cp bdprochot-toggle.sh /usr/bin/bdprochot-toggle ```
+- \# ``` chmod +x /usr/bin/bdprochot-toggle ```
 
 ### systemd service
-- > \# cp bdprochot-toggle-off.service /etc/systemd/system/bdprochot-toggle-off.service
-- > \# systemctl enable bdprochot-toggle-off.service
+- \# ``` cp bdprochot-toggle-off.service /etc/systemd/system/bdprochot-toggle-off.service ```
+- \# ``` systemctl enable bdprochot-toggle-off.service ```
 
 ## usage
 
 This script needs root permissions.
 
 turn BD PROCHOT off
-> bdprochot-toggle off
+``` bdprochot-toggle off ```
 
 turn BD PROCHOT on
-> bdprochot-toggle on
+``` bdprochot-toggle on ```
 
 ### BTW
 if you want to read the reqister manually(needs also mri-tools) use:
-> \# modprobe msr
-> \# rdmsr -d 0x1FC
+``` \# modprobe msr ```
+``` \# rdmsr -d 0x1FC ```
